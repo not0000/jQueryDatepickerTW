@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 民國年日期選擇器</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css'>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h2><p>左邊是民國年，右邊是西元年，可以兩個比較看看</p>
+</h2>
+<label>
+    <input type="text" class="datepickerTW">
+</label>
+<label>
+    <input type="text" class="datepicker">
+</label>
+<p>已知問題</p>
+<ol>
+  <li><p>尚未製作比1911還小(民國前)的情況，所以如果民國年選到個位數，就會變成 1910 1911 1 2 3，選了1911，日期欄位回傳可能就真的會變成 民國1911年，因此不適用於製作可以選到民國年前的歷史文件，請留意</p>
+</li>
+  <li><p>雖然有支援 dateFormat: 'yy-mm-dd' 的格式，可以調換 yy mm dd 的順序，但不能使用大寫的MM，如果用大寫的會變回英文月份</p></li>
+  <li><p>如果是手動在input內輸入日期，而不是使用滑鼠點選民國年 datepicker 內的日期欄位，會造成下次再開啟時，自動切換回當天日期。 (西元年的無此問題)</p></li>
+
+</ol>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-1.12.4.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://code.jquery.com/ui/1.12.0/jquery-ui.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
